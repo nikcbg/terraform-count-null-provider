@@ -1,10 +1,11 @@
-variable "count" {
-  example${count.index}!
-}
-
-
 resource "null_resource" "example" {
-  provisioner "local-exec" {
-    command = "echo example"
+  count = 2
+
+  triggers {
+    static_trigger = "Terraform"
   }
-}
+
+  provisioner "local-exec" {
+    command = "echo example${count.index}"
+  }
+}                                   
