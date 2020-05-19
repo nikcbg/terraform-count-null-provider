@@ -1,5 +1,5 @@
 resource "null_resource" "example" {
-  count = 12
+  count = 9
 
   triggers = {
     static_trigger = "Terraform"
