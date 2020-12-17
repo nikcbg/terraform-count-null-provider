@@ -5,7 +5,5 @@ resource "null_resource" "example" {
     static_trigger = "Terraform"
   }
 
-  provisioner "local-exec" {
-    command = "echo example${count.index}"
-  }
+  
 }
